@@ -32,6 +32,7 @@ export default function Home() {
             <Link to="/mitglied-werden" className="btn btn-primary">Mitglied werden</Link>
             <Link to="/ueber-uns" className="btn btn-outline">Über uns</Link>
           </div>
+          <img src="/orgel-hero.webp" alt="Orgel der Pfarrkirche Ferschnitz" className="hero-organ-img" />
         </div>
       </section>
 
