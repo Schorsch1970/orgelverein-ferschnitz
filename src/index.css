@@ -85,8 +85,9 @@ a:hover { text-decoration: underline; }
 }
 
 .navbar-logo-img {
-  height: 42px;
+  height: 64px;
   width: auto;
+  margin: -10px 0;
 }
 
 .navbar-links {
