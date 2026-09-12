@@ -13,6 +13,7 @@ export default function Navbar({ user }) {
     <nav className="navbar">
       <div className="container navbar-inner">
         <NavLink to="/" className="navbar-logo">
+          <img src="/logo.png" alt="Orgelverein Ferschnitz" className="navbar-logo-img" />
           Orgelverein Ferschnitz
         </NavLink>
         <div className="navbar-links">
