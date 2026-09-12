@@ -11,15 +11,17 @@ export default function Impressum() {
           <h3>Medieninhaber &amp; Herausgeber</h3>
           <p>
             Orgelverein Ferschnitz<br />
-            [Vereinssitz-Adresse eintragen]<br />
             3325 Ferschnitz, Niederösterreich
           </p>
 
           <h3>Vertretungsbefugtes Organ</h3>
-          <p>[Name Obmann/Obfrau eintragen]</p>
+          <p>Georg Berger, Obmann</p>
 
           <h3>Vereinsregisterzahl (ZVR)</h3>
-          <p>[ZVR-Zahl eintragen]</p>
+          <p>1134092736</p>
+
+          <h3>Zuständige Vereinsbehörde</h3>
+          <p>Bezirkshauptmannschaft Amstetten</p>
 
           <h3>Kontakt</h3>
           <p>
@@ -33,9 +35,9 @@ export default function Impressum() {
           </p>
 
           <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginTop: '1.5rem' }}>
-            Die eingeklammerten Angaben sind Platzhalter — bitte in{' '}
-            <code>src/pages/Impressum.jsx</code> durch die echten Vereinsdaten (Adresse,
-            Obmann/Obfrau, ZVR-Zahl) ersetzen.
+            Obmann und ZVR-Zahl stammen aus dem Zentralen Vereinsregister. Falls eine genaue
+            Zustelladresse (Straße/Hausnummer) ergänzt werden soll, bitte in{' '}
+            <code>src/pages/Impressum.jsx</code> eintragen.
           </p>
         </div>
       </div>
