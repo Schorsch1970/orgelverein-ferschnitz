@@ -9,6 +9,7 @@ import Vorstand from './pages/Vorstand'
 import Aktivitaeten from './pages/Aktivitaeten'
 import MitgliedWerden from './pages/MitgliedWerden'
 import Kontakt from './pages/Kontakt'
+import Impressum from './pages/Impressum'
 import Login from './pages/Login'
 import AdminAktivitaeten from './pages/admin/AdminAktivitaeten'
 import NewAktivitaet from './pages/admin/NewAktivitaet'
@@ -50,6 +51,7 @@ export default function App() {
         <Route path="/aktivitaeten" element={<Aktivitaeten />} />
         <Route path="/mitglied-werden" element={<MitgliedWerden />} />
         <Route path="/kontakt" element={<Kontakt />} />
+        <Route path="/impressum" element={<Impressum />} />
         <Route path="/login" element={<Login />} />
 
         <Route path="/admin/aktivitaeten" element={<PrivateRoute user={user}><AdminAktivitaeten /></PrivateRoute>} />

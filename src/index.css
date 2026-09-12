@@ -409,12 +409,128 @@ a:hover { text-decoration: underline; }
 .footer {
   background: var(--bordeaux-dark);
   color: var(--cream);
-  padding: 2.5rem 1.5rem;
-  text-align: center;
+  padding: 3.5rem 1.5rem 0;
   margin-top: 3rem;
 }
-.footer a { color: var(--gold-light); }
-.footer p { margin: 0.3em 0; font-size: 0.9rem; }
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.footer-col {
+  min-width: 0;
+}
+
+.footer-logo {
+  height: 56px;
+  width: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.footer-heading {
+  font-family: 'Playfair Display', serif;
+  color: var(--gold-light);
+  font-size: 1.1rem;
+  margin-bottom: 0.9rem;
+}
+
+.footer-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  color: var(--cream);
+  margin: 0 0 0.6em;
+  line-height: 1.5;
+}
+
+.footer a {
+  color: var(--gold-light);
+}
+.footer a:hover {
+  color: var(--gold);
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 320px;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 0.6rem 0.8rem;
+  border-radius: 5px;
+  border: 1px solid var(--bordeaux);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--cream);
+  font-size: 0.92rem;
+}
+.newsletter-form input[type="email"]::placeholder {
+  color: rgba(250, 245, 236, 0.55);
+}
+.newsletter-form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.newsletter-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: rgba(250, 245, 236, 0.8);
+  line-height: 1.4;
+}
+.newsletter-consent input {
+  margin-top: 0.2rem;
+}
+
+.newsletter-form .btn {
+  align-self: flex-start;
+}
+
+.newsletter-success {
+  color: var(--gold-light);
+  font-style: italic;
+  max-width: 320px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(250, 245, 236, 0.15);
+  padding: 1.25rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(250, 245, 236, 0.7);
+}
+
+@media (max-width: 780px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+    text-align: center;
+  }
+  .footer-logo {
+    margin: 0 auto 1rem;
+  }
+  .footer-text {
+    justify-content: center;
+  }
+  .newsletter-form, .newsletter-success {
+    max-width: none;
+    align-items: center;
+  }
+  .newsletter-consent {
+    text-align: left;
+  }
+  .newsletter-form .btn {
+    align-self: center;
+  }
+}
 
 @media (max-width: 640px) {
   h1 { font-size: 2rem; }

@@ -34,6 +34,21 @@ create policy "vorstand_select_all" on vorstand
 create policy "vorstand_write_auth" on vorstand
   for all using (auth.role() = 'authenticated') with check (auth.role() = 'authenticated');
 
+create table if not exists newsletter_abos (
+  id uuid primary key default gen_random_uuid(),
+  email text not null unique,
+  created_at timestamptz default now()
+);
+
+alter table newsletter_abos enable row level security;
+
+create policy "newsletter_insert_public" on newsletter_abos
+  for insert with check (true);
+create policy "newsletter_select_auth" on newsletter_abos
+  for select using (auth.role() = 'authenticated');
+create policy "newsletter_delete_auth" on newsletter_abos
+  for delete using (auth.role() = 'authenticated');
+
 -- Storage: im Dashboard unter Storage zwei Buckets anlegen, jeweils "Public" aktiviert:
 --   aktivitaeten-bilder
 --   vorstand-fotos
