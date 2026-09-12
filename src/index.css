@@ -58,6 +58,31 @@ a:hover { text-decoration: underline; }
   padding: 0 1.5rem;
 }
 
+/* Pfeifenbanner (Zierelement rechter Rand, analog Blumenbanner VitaeCanva) */
+.main-content {
+  position: relative;
+  z-index: 2;
+}
+
+.pipes-banner {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 150px;
+  background-image: url('/pipes-banner.webp');
+  background-repeat: repeat-y;
+  background-position: top center;
+  background-size: 150px auto;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (max-width: 1400px) {
+  .pipes-banner { display: none; }
+}
+
 /* Navbar */
 .navbar {
   background: var(--bordeaux-dark);

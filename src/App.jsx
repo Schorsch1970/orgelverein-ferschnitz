@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-route
 import { supabase } from './supabase'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import PipesBanner from './components/PipesBanner'
 import Home from './pages/Home'
 import UeberUns from './pages/UeberUns'
 import Vorstand from './pages/Vorstand'
@@ -43,26 +44,29 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <Navbar user={user} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/ueber-uns" element={<UeberUns />} />
-        <Route path="/vorstand" element={<Vorstand />} />
-        <Route path="/aktivitaeten" element={<Aktivitaeten />} />
-        <Route path="/mitglied-werden" element={<MitgliedWerden />} />
-        <Route path="/kontakt" element={<Kontakt />} />
-        <Route path="/impressum" element={<Impressum />} />
-        <Route path="/login" element={<Login />} />
+      <PipesBanner />
+      <div className="main-content">
+        <Navbar user={user} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/ueber-uns" element={<UeberUns />} />
+          <Route path="/vorstand" element={<Vorstand />} />
+          <Route path="/aktivitaeten" element={<Aktivitaeten />} />
+          <Route path="/mitglied-werden" element={<MitgliedWerden />} />
+          <Route path="/kontakt" element={<Kontakt />} />
+          <Route path="/impressum" element={<Impressum />} />
+          <Route path="/login" element={<Login />} />
 
-        <Route path="/admin/aktivitaeten" element={<PrivateRoute user={user}><AdminAktivitaeten /></PrivateRoute>} />
-        <Route path="/admin/aktivitaeten/neu" element={<PrivateRoute user={user}><NewAktivitaet /></PrivateRoute>} />
-        <Route path="/admin/aktivitaeten/:id/bearbeiten" element={<PrivateRoute user={user}><EditAktivitaet /></PrivateRoute>} />
+          <Route path="/admin/aktivitaeten" element={<PrivateRoute user={user}><AdminAktivitaeten /></PrivateRoute>} />
+          <Route path="/admin/aktivitaeten/neu" element={<PrivateRoute user={user}><NewAktivitaet /></PrivateRoute>} />
+          <Route path="/admin/aktivitaeten/:id/bearbeiten" element={<PrivateRoute user={user}><EditAktivitaet /></PrivateRoute>} />
 
-        <Route path="/admin/vorstand" element={<PrivateRoute user={user}><AdminVorstand /></PrivateRoute>} />
-        <Route path="/admin/vorstand/neu" element={<PrivateRoute user={user}><NewVorstand /></PrivateRoute>} />
-        <Route path="/admin/vorstand/:id/bearbeiten" element={<PrivateRoute user={user}><EditVorstand /></PrivateRoute>} />
-      </Routes>
-      <Footer />
+          <Route path="/admin/vorstand" element={<PrivateRoute user={user}><AdminVorstand /></PrivateRoute>} />
+          <Route path="/admin/vorstand/neu" element={<PrivateRoute user={user}><NewVorstand /></PrivateRoute>} />
+          <Route path="/admin/vorstand/:id/bearbeiten" element={<PrivateRoute user={user}><EditVorstand /></PrivateRoute>} />
+        </Routes>
+        <Footer />
+      </div>
     </BrowserRouter>
   )
 }
