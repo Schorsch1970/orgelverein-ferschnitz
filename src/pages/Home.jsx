@@ -30,10 +30,6 @@ export default function Home() {
           <h1>Orgelverein Ferschnitz</h1>
           <p>„Gott ist ein Organist, wir sind sein Orgelwerk; sein Geist bläst jedem ein.“</p>
           <p className="hero-cite">— Angelus Silesius</p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link to="/mitglied-werden" className="btn btn-primary">Mitglied werden</Link>
-            <Link to="/ueber-uns" className="btn btn-outline">Über uns</Link>
-          </div>
         </div>
       </section>
 
