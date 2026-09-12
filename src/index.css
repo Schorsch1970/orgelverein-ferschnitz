@@ -149,50 +149,19 @@ a:hover { text-decoration: underline; }
   font-size: 1.3rem;
   letter-spacing: 0.015em;
   max-width: 640px;
-  margin: 0 auto 1.6em;
+  margin: 0 auto 0.5em;
 }
 
-/* Quote */
-.quote-section {
-  padding: 3.5rem 0 3rem;
-  text-align: center;
-}
-
-.quote-section blockquote {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.quote-section blockquote::before {
-  content: '„';
+.hero-cite {
   display: block;
-  font-family: 'Playfair Display', serif;
-  font-size: 3.5rem;
-  color: var(--gold);
-  line-height: 1;
-  margin-bottom: -0.5rem;
-}
-
-.quote-section blockquote p {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-weight: 500;
-  font-size: 1.5rem;
-  color: var(--bordeaux-dark);
-  line-height: 1.5;
-  margin: 0;
-}
-
-.quote-section cite {
-  display: block;
-  margin-top: 1.1rem;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-style: normal;
   font-weight: 600;
   color: var(--gold);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   font-size: 0.85rem;
+  margin: 0 auto 1.8em;
 }
 
 /* Buttons */

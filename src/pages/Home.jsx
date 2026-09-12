@@ -26,20 +26,12 @@ export default function Home() {
       <section className="hero">
         <div className="container">
           <h1>Orgelverein Ferschnitz</h1>
-          <p>Wir bewahren, pflegen und beleben die Orgel- und Kirchenmusik in Ferschnitz — gemeinsam mit allen, die Freude an diesem besonderen Instrument haben.</p>
+          <p>„Gott ist ein Organist, wir sind sein Orgelwerk; sein Geist bläst jedem ein.“</p>
+          <p className="hero-cite">— Angelus Silesius</p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link to="/mitglied-werden" className="btn btn-primary">Mitglied werden</Link>
             <Link to="/ueber-uns" className="btn btn-outline">Über uns</Link>
           </div>
-        </div>
-      </section>
-
-      <section className="quote-section">
-        <div className="container">
-          <blockquote>
-            <p>„Gott ist ein Organist, wir sind sein Orgelwerk; sein Geist bläst jedem ein.“</p>
-            <cite>— Angelus Silesius</cite>
-          </blockquote>
         </div>
       </section>
 
