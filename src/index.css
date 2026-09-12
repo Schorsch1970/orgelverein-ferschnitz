@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Source+Sans+3:wght@400;500;600&display=swap');
 
 :root {
-  --bordeaux: #6d1f2b;
-  --bordeaux-dark: #4d151e;
+  --bordeaux: #8a2e3d;
+  --bordeaux-dark: #6d2130;
   --gold: #b8933f;
-  --gold-light: #e4c98a;
+  --gold-light: #ecd8a3;
   --cream: #faf5ec;
   --cream-dark: #f0e6d4;
   --text-dark: #2b2320;
@@ -126,14 +126,29 @@ a:hover { text-decoration: underline; }
 
 .hero h1 {
   color: var(--white);
-  margin-bottom: 0.4em;
+  margin-bottom: 0.5em;
+  position: relative;
+  display: inline-block;
+}
+
+.hero h1::after {
+  content: '';
+  display: block;
+  width: 90px;
+  height: 2px;
+  background: var(--gold);
+  margin: 0.5em auto 0;
 }
 
 .hero p {
   color: var(--gold-light);
-  font-size: 1.2rem;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.3rem;
+  letter-spacing: 0.015em;
   max-width: 640px;
-  margin: 0 auto 1.5em;
+  margin: 0 auto 1.6em;
 }
 
 /* Buttons */
