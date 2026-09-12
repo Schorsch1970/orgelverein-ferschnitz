@@ -34,6 +34,15 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="quote-section">
+        <div className="container">
+          <blockquote>
+            <p>„Gott ist ein Organist, wir sind sein Orgelwerk; sein Geist bläst jedem ein.“</p>
+            <cite>— Angelus Silesius</cite>
+          </blockquote>
+        </div>
+      </section>
+
       <section className="section">
         <div className="container">
           <div className="section-title">
