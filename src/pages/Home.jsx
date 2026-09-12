@@ -24,7 +24,9 @@ export default function Home() {
   return (
     <>
       <section className="hero">
-        <div className="container">
+        <img src="/orgel-hero.webp" alt="Orgel der Pfarrkirche Ferschnitz" className="hero-bg-img" />
+        <div className="hero-overlay" />
+        <div className="container hero-content">
           <h1>Orgelverein Ferschnitz</h1>
           <p>„Gott ist ein Organist, wir sind sein Orgelwerk; sein Geist bläst jedem ein.“</p>
           <p className="hero-cite">— Angelus Silesius</p>
@@ -32,7 +34,6 @@ export default function Home() {
             <Link to="/mitglied-werden" className="btn btn-primary">Mitglied werden</Link>
             <Link to="/ueber-uns" className="btn btn-outline">Über uns</Link>
           </div>
-          <img src="/orgel-hero.webp" alt="Orgel der Pfarrkirche Ferschnitz" className="hero-organ-img" />
         </div>
       </section>
 
